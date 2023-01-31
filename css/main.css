@@ -137,15 +137,23 @@ textarea {
   white-space: inherit;
   width: auto;
 }
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
 .container{
   max-width: 1200px;
   margin:0 auto;
   clear: both;
 }
-.container:after,.container:before{
+header .searcbox{
+  float: right;
+}
+.innerwrap:after,.innerwrap:before{
   content: "";
-  display: table;
-  float: left;
+  display: block;
+  clear: both;
 }
 .logo{
   float: left;
@@ -157,9 +165,24 @@ textarea {
   max-width: 110px;
 }
 header{
-  background-color: red;
+  background-color: #fff;
   padding: 15px;
 }
+header .menu li{
+  display: inline-block;
+  padding: 10px;
+}
+header .menu li a{
+  color:#000;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+}
+header .menu li a:hover{
+  color:#fff;
+}
+
 main{
   background: yellow;
   padding: 15px;
@@ -170,6 +193,13 @@ footer{
   color: #fff;
   padding: 15px;
 }
+
+@media screen and (min-width:992px) {
+  header{
+    background: red;
+  }
+}
+
 /*
  * Hide visually and from screen readers, but maintain layout
  */
